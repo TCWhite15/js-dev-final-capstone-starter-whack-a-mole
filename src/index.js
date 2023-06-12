@@ -60,10 +60,9 @@ function randomInteger(min, max) {
  */
 function setDelay(difficulty) {
   // TODO: Write your code here.
-  if (difficulty === 'easy') {return 1500;
-  } else if (difficulty === 'normal') {return 1000;
-  } else if (difficulty === 'hard') {return randomInteger(600, 1200);
-  }
+  if (difficulty === 'easy') {return 1500;}
+  if (difficulty === 'normal') {return 1000;}
+  if (difficulty === 'hard') {return randomInteger(600, 1200)}
 }
 
 /**
@@ -115,14 +114,15 @@ const index = randomInteger(0, 8);
 function gameOver() {
   // TODO: Write your code here
   if (time > 0) {
-    timeoutId = showUp();
+    timeoutId = showUp()
     return timeoutId; 
 }
 
-  else
+  else {
       gameStopped = stopGame();
     return gameStopped;
   }
+}
 
 /**
 *
@@ -216,7 +216,7 @@ function clearScore() {
 function updateTimer() {
   // TODO: Write your code here.
   // hint: this code is provided to you in the instructions.
-     if (timer > 0){
+     if (timer > 0) {
       time -= 1;
       timer += 1
       timerDisplay.textContent = time;
