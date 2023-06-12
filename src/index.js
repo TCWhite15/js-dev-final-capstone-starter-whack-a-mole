@@ -285,6 +285,25 @@ function startGame(){
 
 startButton.addEventListener("click", startGame);
 
+const audioHit = new Audio("assets\hit.mp3");
+const song = new Audio("assets\molesong.mp3");
+
+function playAudio(audioObject) {
+  audioObject.play();
+}
+
+function loopAudio(audioObject) {
+  audioObject.loop = true;
+  playAudio(audioObject);
+}
+
+function stopAudio(audioObject) {
+  audioObject.pause();
+}
+
+function play(){
+  playAudio(song);
+}
 
 // Please do not modify the code below.
 // Used for testing purposes.
