@@ -28,10 +28,11 @@ h2 {
 #start {
     text-align: center;
     font-size: 30px;
+    font-weight: 300;
 }
 
 #timer{
-    color: white;
+    color: rgb(140, 219, 11);
 }
 
 .grid {
@@ -66,7 +67,8 @@ h2 {
 .mole {
   /*background:url('./assets/mole.png') bottom center no-repeat;*/
   background:url('https://github.com/Thinkful-Ed/js-dev-final-capstone-starter/blob/main/assets/mole.png?raw=true') bottom center no-repeat;
-  background-size: 40%;
+  background-size: 50%;
+  /*changed from background-size: 40%
   position: absolute;
   top: 100%;
   width: 100%;
