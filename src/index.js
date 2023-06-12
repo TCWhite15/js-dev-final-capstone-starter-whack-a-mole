@@ -98,7 +98,12 @@ const index = randomInteger(0, 8);
 */
 function gameOver() {
   // TODO: Write your code here
-  
+  if time > 0;
+    timeoutId = showUp();
+    return timeoutId;
+  else
+      gameStopped = stopGame();
+    return gameStopped;
 }
 
 /**
@@ -163,7 +168,7 @@ function toggleVisibility(hole){
 */
 function updateScore() {
   // TODO: Write your code here
-
+  let score.textContent = points;
   return points;
 }
 
@@ -177,7 +182,9 @@ function updateScore() {
 function clearScore() {
   // TODO: Write your code here
   // points = 0;
+    let points = 0;
   // score.textContent = points;
+  let score.textContent = points;
   return points;
 }
 
@@ -189,9 +196,12 @@ function clearScore() {
 function updateTimer() {
   // TODO: Write your code here.
   // hint: this code is provided to you in the instructions.
-  
-  return time;
-}
+     if (time > 0){
+      time -= 1;
+      timerDisplay.textContent = time;
+    }
+    return time;
+ }
 
 /**
 *
@@ -201,9 +211,11 @@ function updateTimer() {
 */
 function startTimer() {
   // TODO: Write your code here
-  // timer = setInterval(updateTimer, 1000);
+  timer = setInterval(updateTimer, 1000);
   return timer;
 }
+
+startTimer();
 
 /**
 *
@@ -216,7 +228,9 @@ function startTimer() {
 function whack(event) {
   // TODO: Write your code here.
   // call updateScore()
-  return points;
+  console.log("whack!");
+  updateScore();
+ // commented out this code: return points;
 }
 
 /**
@@ -226,9 +240,13 @@ function whack(event) {
 */
 function setEventListeners(){
   // TODO: Write your code here
-
+  moles.forEach(
+       mole => mole.addEventListener('click', whack)
+  );
   return moles;
 }
+
+setEventListeners();
 
 /**
 *
@@ -260,8 +278,8 @@ function stopGame(){
 *
 */
 function startGame(){
-  //setDuration(10);
-  //showUp();
+  setDuration(10);
+  showUp();
   return "game started";
 }
 
