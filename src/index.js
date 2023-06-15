@@ -60,9 +60,9 @@ function randomInteger(min, max) {
  */
 function setDelay(difficulty) {
   // TODO: Write your code here.
-  if (difficulty === 'easy') {return 1500;}
-  if (difficulty === 'normal') {return 1000;}
-  if (difficulty === 'hard') {return randomInteger(600, 1200)}
+  if (difficulty === 'easy') { return 1500 }
+  if (difficulty === 'normal') { return 1000 }
+  if (difficulty === 'hard') { return randomInteger (600, 1200) }
 }
 
 /**
@@ -83,7 +83,9 @@ function chooseHole(holes) {
   // TODO: Write your code here.
 const index = randomInteger(0, 8);
   const hole = holes[index];
-    if (hole === lastHole){return chooseHole(holes);
+    if (hole === lastHole) {
+      
+      return chooseHole(holes);
     }
     else {
   lastHole = hole;
@@ -114,11 +116,9 @@ const index = randomInteger(0, 8);
 function gameOver() {
   // TODO: Write your code here
   if (time > 0) {
-    timeoutId = showUp()
+    timeoutId = showUp();
     return timeoutId; 
-}
-
-  else {
+} else {
       gameStopped = stopGame();
     return gameStopped;
   }
@@ -290,9 +290,10 @@ function setDuration(duration) {
 * timer using clearInterval. Returns "game stopped".
 *
 */
-function stopGame(){
+function stopGame() {
   stopAudio(song);  //optional
   clearInterval(timer);
+  time = 15;
   return "game stopped";
 }
 
