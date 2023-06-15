@@ -252,9 +252,7 @@ function startTimer() {
 function whack(event) {
   // TODO: Write your code here.
   // call updateScore()
-  console.log("whack!");
-  updateScore();
-  playAudio(audioHit);
+   updateScore();
   return points;
  }
 
@@ -263,7 +261,7 @@ function whack(event) {
 * Adds the 'click' event listeners to the moles. See the instructions
 * for an example on how to set event listeners using a for loop.
 */
-function setEventListeners(){
+function setEventListeners() {
   // TODO: Write your code here
   moles.forEach(
        mole => mole.addEventListener('click', whack)
@@ -293,7 +291,6 @@ function setDuration(duration) {
 function stopGame() {
   stopAudio(song);  //optional
   clearInterval(timer);
-  time = 15;
   return "game stopped";
 }
 
@@ -304,7 +301,6 @@ function stopGame() {
 *
 */
 function startGame() {
-  loopAudio(song);
   setDuration(timer);
   showUp();
   startTimer();
