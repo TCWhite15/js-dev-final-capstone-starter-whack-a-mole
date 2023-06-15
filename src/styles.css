@@ -12,9 +12,9 @@ html {
 
 h1 {
   text-align: center;
-  font-size: 90px;
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
-  color: white;
+  font-size: 95px;
+  font-family: "Arial", "Comic Sans", cursive;
+  color: rgb(162, 74, 117);
   -webkit-text-stroke: 2px black;
 }
 
@@ -42,6 +42,7 @@ h2 {
   flex-wrap: wrap;
   margin: 0 auto;
   /*cursor: url('./assets/mallet.png'), pointer;*/
+  cursor: url('./assets/mallet.png'), pointer;
 }
 
 .hole {

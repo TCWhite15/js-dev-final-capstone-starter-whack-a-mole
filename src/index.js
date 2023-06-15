@@ -118,7 +118,8 @@ function gameOver() {
   if (time > 0) {
     timeoutId = showUp();
     return timeoutId; 
-} else {
+} 
+   else {
       gameStopped = stopGame();
     return gameStopped;
   }
@@ -147,7 +148,7 @@ function showUp() {
 * the timeoutID
 *
 */
-function showAndHide(hole, delay){
+function showAndHide(hole, delay) {
   // TODO: call the toggleVisibility function so that it adds the 'show' class.
   toggleVisibility(hole);
   const timeoutID = setTimeout(() => {
