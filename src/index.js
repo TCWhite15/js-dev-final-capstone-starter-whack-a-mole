@@ -216,15 +216,11 @@ function clearScore() {
 function updateTimer() {
   // TODO: Write your code here.
   // hint: this code is provided to you in the instructions.
-     if (timer > 0) {
-      time -= 1;
-      timer += 1;
-      timerDisplay.textContent = time;
-    console.log('timer',timer);
-    console.log('time',time);
-    }
-
-    return time;
+  if (time > 0) {
+    time -= 1;
+    timerDisplay.textContent = time;
+  }
+  return time;
  }
 
 /**
