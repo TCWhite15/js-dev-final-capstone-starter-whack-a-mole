@@ -299,6 +299,7 @@ function stopGame() {
 */
 function startGame() {
   setDuration(timer);
+  loopAudio();
   showUp();
   startTimer();
   clearScore();
